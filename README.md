@@ -4,8 +4,6 @@
 
 This project is a **desktop-based Weather Forecast Application** built using **Python** and **Tkinter**. It provides real-time weather updates for any city, including temperature, humidity, and timezone-specific information through an interactive GUI.
 
----
-
 ## 🚀 Features
 
 * 🌍 **City-based Weather Search**
@@ -15,16 +13,12 @@ This project is a **desktop-based Weather Forecast Application** built using **P
 * 🔄 **Real-time Weather Data Integration**
 * ⚠️ Proper **Exception Handling** for invalid inputs
 
----
-
 ## 🛠️ Technologies Used
 
 * **Python**
 * **Tkinter** – GUI development
 * **pytz** – Timezone conversion
 * **Requests / Weather API** – Fetch real-time weather data
-
----
 
 ## 📷 Application Workflow
 
@@ -38,14 +32,14 @@ This project is a **desktop-based Weather Forecast Application** built using **P
    * Local time 🕒
 4. Handles errors for invalid or unavailable cities
 
----
-
 ## 📦 Installation
 
 ### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/SSwapnild31/weather-forecast-app.git
+```
+```bash
 cd weather-forecast-app
 ```
 
@@ -61,18 +55,6 @@ pip install requests pytz
 python main.py
 ```
 
----
-
-## ⚙️ Configuration
-
-* 
-
-```python
-
-```
-
----
-
 ## 🧠 Concepts Used
 
 * GUI Development (Tkinter)
@@ -81,16 +63,12 @@ python main.py
 * Timezone Conversion
 * Event-driven Programming
 
----
-
 ## ❗ Error Handling
 
 * Invalid city name
 * API request failure
 * Network issues
 * Empty input handling
-
----
 
 ## 🔮 Future Enhancements
 
@@ -100,13 +78,9 @@ python main.py
 * 📍 Auto-detect user location
 * 📅 5-day / 7-day forecast
 
----
-
 ## 🤝 Contributing
 
 Feel free to fork this repo and improve the project. Contributions are welcome!
-
----
 
 ## 📜 License
 

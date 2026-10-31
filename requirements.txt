@@ -1,0 +1,5 @@
+geopy
+Pillow
+pytz
+requests
+timezonefinder

@@ -7,18 +7,36 @@ This project is a **desktop-based Weather Forecast Application** built using **P
 ## 🚀 Features
 
 * 🌍 **City-based Weather Search**
+* 📍 Displays the **selected city and country**
 * 🌡️ Displays **Temperature, Humidity, and Weather Conditions**
 * 🕒 Shows **Timezone-specific Local Time**
+* 🌅 Displays local **sunrise and sunset** times
+* 🕒 Shows an **8-step hourly outlook** with weather icons
+* 🌬️ Shows current **visibility, cloud cover, and wind direction** below the hourly outlook
+* 🌤️ Displays weather icons using Pillow
+* 🔁 Refreshes the current city's weather
+* ⌛ Searches in the background so the window stays responsive
+* 🌡️ Switches temperature display between **Celsius and Fahrenheit**
+* ⭐ Saves favorite cities between app launches
+* 🌡️ Shows temperatures alongside saved favorites
+* 🎨 Switches between **dark and light themes**
+* ↺ Resets the current weather display
 * 🖥️ Interactive and user-friendly **GUI using Tkinter**
 * 🔄 **Real-time Weather Data Integration**
 * ⚠️ Proper **Exception Handling** for invalid inputs
+
+Favorite cities and the selected theme are saved locally in
+`~/.weather_forecast_favorites.json`.
 
 ## 🛠️ Technologies Used
 
 * **Python**
 * **Tkinter** – GUI development
-* **pytz** – Timezone conversion
-* **Requests / Weather API** – Fetch real-time weather data
+* **threading** – Background weather and image requests
+* **Pillow** – Weather icon images
+* **geopy** – City geocoding
+* **timezonefinder / pytz** – Timezone lookup and conversion
+* **Requests / OpenWeatherMap API** – Fetch real-time weather data
 
 ## 📷 Application Workflow
 
@@ -30,7 +48,13 @@ This project is a **desktop-based Weather Forecast Application** built using **P
    * Humidity 💧
    * Weather condition ☁️
    * Local time 🕒
-4. Handles errors for invalid or unavailable cities
+   * Wind speed and air pressure
+   * Sunrise and sunset
+   * An hourly outlook with weather icons
+   * Visibility, cloud cover, and wind direction
+4. Add cities to favorites; select a saved city to search it again
+5. Switch between dark and light mode, or reset the current display
+6. Handles errors for invalid or unavailable cities without freezing the window
 
 ## 📦 Installation
 
@@ -46,13 +70,36 @@ cd weather-forecast-app
 ### 2️⃣ Install dependencies
 
 ```bash
-pip install requests pytz
+pip install -r requirements.txt
 ```
 
-### 3️⃣ Run the application
+### 3️⃣ Configure the OpenWeatherMap API key
+
+Create an API key in your OpenWeatherMap account, then set it as an environment
+variable before starting the app:
 
 ```bash
-python main.py
+export OPENWEATHER_API_KEY="your_api_key"
+```
+
+In PowerShell, use:
+
+```powershell
+$env:OPENWEATHER_API_KEY = "your_api_key"
+```
+
+Do not commit your API key to the repository.
+
+### 4️⃣ Run the application
+
+```bash
+python weather.py
+```
+
+### 5️⃣ Run the tests
+
+```bash
+python -m unittest discover -s tests
 ```
 
 ## 🧠 Concepts Used
@@ -69,14 +116,6 @@ python main.py
 * API request failure
 * Network issues
 * Empty input handling
-
-## 🔮 Future Enhancements
-
-* 🌐 Add multiple city comparison
-* 📊 Weather charts & graphs
-* 🌙 Dark mode UI
-* 📍 Auto-detect user location
-* 📅 5-day / 7-day forecast
 
 ## 🤝 Contributing
 
